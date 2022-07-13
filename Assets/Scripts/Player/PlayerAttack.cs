@@ -20,8 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     //プレイヤーのスクリプト
     private PlayerController  _playerCs;
-    /*[SerializeField]*/ PlayerHp _playerHp = default;
-    // Start is called before the first frame update
+    PlayerHp _playerHp = default;
     void Start()
     {
         m_rb2d = GetComponent<Rigidbody2D>();
@@ -59,13 +58,10 @@ public class PlayerAttack : MonoBehaviour
         }
 
         //下に落ちたら消える
-        if (this.transform.position.y < -10f)
+        if (this.transform.position.y < -10f || this.transform.position.x < -4)
         {
-            _playerHp._getPlayerHp -= 1;
+            _playerCs._noAt = true;
             Destroy(this.gameObject);
         }
-
-
     }
-   
 }

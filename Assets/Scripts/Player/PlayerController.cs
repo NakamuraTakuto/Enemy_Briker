@@ -17,10 +17,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         m_rd2d = GetComponent<Rigidbody2D>();
-
-    
         _noAt = true;
-
     }
 
     // Update is called once per frame
@@ -35,9 +32,8 @@ public class PlayerController : MonoBehaviour
         if (_noAt) 
         {
             //Debug.Log("yobareta");
-            var at = Instantiate(AtPrefab, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 1.5f), this.gameObject.transform.rotation);
+            Instantiate(AtPrefab, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 1.5f), this.gameObject.transform.rotation);
             _noAt = false;
-
         }
     }
 }

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 683298783631230453}
   - component: {fileID: 8210865232860757615}
-  - component: {fileID: 5363693079457708709}
   - component: {fileID: 7641105343531603387}
   - component: {fileID: 7710523685189508775}
+  - component: {fileID: -3734203140948093335}
   m_Layer: 11
   m_Name: HpPlus
   m_TagString: enat
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5363693079457708709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143359366001417119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f94a7c35bb62b4f9ecdff12d8ab312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7641105343531603387
 Rigidbody2D:
   serializedVersion: 4
@@ -135,3 +123,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.28
+--- !u!114 &-3734203140948093335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143359366001417119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1011b9e506505ac4492ee57d63b03379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHpVariable: {fileID: 0}

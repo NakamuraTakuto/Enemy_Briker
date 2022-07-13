@@ -21,7 +21,7 @@ public abstract class FallBace : MonoBehaviour
     }
     private void Update()
     {
-        if (this.transform.position.y <= -15)
+        if (this.transform.position.y < -10 || this.transform.position.x < -4)
         {
             Destroy(this.gameObject);
         }
