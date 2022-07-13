@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class e_at : MonoBehaviour
+public class ObjectGenerater : MonoBehaviour
 {
     //一定時間でオブジェクトを生成する
     /// <summary>お邪魔ブロック</summary>
@@ -21,7 +21,7 @@ public class e_at : MonoBehaviour
     float _timer;
     float _timer2;
 
-  
+
     void Start()
     {
         //最初にオブジェクトを出す
@@ -50,9 +50,5 @@ public class e_at : MonoBehaviour
             _timer2 = 0;
             Instantiate(_prefabHpUp, this.transform.position, Quaternion.identity);
         }
-
-        
     }
-
-  
 }

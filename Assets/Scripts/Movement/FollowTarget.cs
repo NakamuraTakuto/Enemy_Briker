@@ -12,7 +12,7 @@ public class FollowTarget : Physics2DObject
 	// Speed used to move towards the target
 	public float speed = 1f;
 
-	// Used to decide if the object will look at the target while pursuing it
+	// Used to decide if the object will look PlayerAttack the target while pursuing it
 	public bool lookAtTarget = false;
 
 	// The direction that will face the target

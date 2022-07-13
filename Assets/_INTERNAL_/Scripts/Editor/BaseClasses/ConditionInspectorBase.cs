@@ -28,7 +28,7 @@ public class ConditionInspectorBase : InspectorBase
 
 			/*
 			TODO: would be great to have but doesn't work for now
-			//Add button at the end to unlink the Action?
+			//Add button PlayerAttack the end to unlink the Action?
 			Rect buttonRect = new Rect(rect.width + 7, rect.y, 25, EditorGUIUtility.singleLineHeight);
 			bool b = GUI.Button(buttonRect, "-");
 			if(b)

@@ -33,7 +33,7 @@ public class HpPlus : MonoBehaviour
         {
             //‚Ô‚Â‚©‚Á‚½‚çÁ‚¦‚é
             //‚Ô‚Â‚©‚Á‚½‚Æ‚«‚ÉPlayerHp‚©‚ç1ˆø‚­
-            _playerHpPlus._playerHp += 2;
+            _playerHpPlus._getPlayerHp += 2;
             Destroy(this.gameObject);
         }
     }

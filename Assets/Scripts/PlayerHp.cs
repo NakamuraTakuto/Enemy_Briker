@@ -9,37 +9,45 @@ public class PlayerHp : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] public float _playerHp = 5f;
-    Slider _PhpSlider;
-    GameOver _scene;
-    float _pHpM;
-    public bool _pToF = false;
+    /// <summary> PlayerのHp</summary>
+    [SerializeField] private float _playerHp = 5f;
 
+    /// <summary>Player用のSliderを取ってくる</summary>
+    [SerializeField] Slider _playerHpSlider;
+
+    /// <summary>カプセル化playerHp </summary>
+    public float _getPlayerHp
+    {
+        set
+        {
+            _playerHp = value;
+        }
+        get
+        {
+            return _playerHp;
+        }
+    }
+
+    /// <summary>PlayerHPの最大値</summary>
+    float _playerHpMax;
+ 
     void Start()
     {
-        _PhpSlider = GameObject.Find("PlayerHpSlider").GetComponent<Slider>();
-        _scene = GameObject.Find("SceneChanger").GetComponent<GameOver>();
-        _pHpM = _playerHp;
+        _playerHpMax = _getPlayerHp;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //HPが0なったらtrue
-        if (_playerHp == 0)
-        {
-            _pToF = true;
-        }
-
         //HPがMAXを超えたらMAXにもどす
-        if (_playerHp > _pHpM)
+        if (_getPlayerHp > _playerHpMax)
         {
-            _playerHp = _pHpM;
+            _getPlayerHp = _playerHpMax;
         }
 
 
         //HPに合わせてSliderを調整する
-        _PhpSlider.value = _playerHp;
+        _playerHpSlider.value = _getPlayerHp;
     }
 
 

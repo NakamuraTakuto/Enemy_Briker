@@ -4,19 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 public class EnemyHp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] public int _enemyHp = 20;
-    Slider _EHpSlider;
-    
-    void Start()
-    {
-        _EHpSlider = GameObject.Find("EnemyHpSlider").GetComponent < Slider > ();
-    }
+    /// <summary>EnemyHp</summary>
+    [SerializeField] private float _enemyHp = 20;
 
+    /// <summary>enemy用のSliderを取ってくる</summary>
+    [SerializeField] Slider _enemyHpSlider;
+    /// <summary>カプセル化enemyHp</summary>
+    public float _getEnemyHp
+    {
+        set
+        {
+            _enemyHp = value;
+        }
+        get
+        {
+            return _enemyHp;
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {
         //HPに合わせてSliderを調整する
-        _EHpSlider.value = _enemyHp;
+        _enemyHpSlider.value = _getEnemyHp;
     }
 }

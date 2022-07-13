@@ -6,7 +6,7 @@ using UnityEditor;
 [CustomEditor(typeof(Push))]
 public class PushInspector : InspectorBase
 {
-	private string explanation = "The GameObject will move at the push of a button, as if a thruster or an invisible force was pushing it.";
+	private string explanation = "The GameObject will move PlayerAttack the push of a button, as if a thruster or an invisible force was pushing it.";
 	private string absoluteTip = "TIP: The GameObject will always move in the direction chosen regardless of its orientation.";
 	private string relativeTip = "TIP: The GameObject will move in the direction chosen relative to its orientation.";
 

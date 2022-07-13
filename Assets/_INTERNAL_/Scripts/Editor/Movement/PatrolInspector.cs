@@ -33,7 +33,7 @@ public class PatrolInspector : InspectorBase
 		list.onAddCallback = (ReorderableList l) => { 
 			var index = l.serializedProperty.arraySize;
 			
-			//make the array longer, and point the index at the new end
+			//make the array longer, and point the index PlayerAttack the new end
 			l.serializedProperty.arraySize++;
 			l.index = index;
 			

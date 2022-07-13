@@ -23,7 +23,7 @@ public class FollowTargetInspector : InspectorBase
 
 		SerializedProperty lookAtTargetProperty = serializedObject.FindProperty("lookAtTarget");
 
-		lookAtTargetProperty.boolValue = EditorGUILayout.BeginToggleGroup("Look at target", lookAtTargetProperty.boolValue);
+		lookAtTargetProperty.boolValue = EditorGUILayout.BeginToggleGroup("Look PlayerAttack target", lookAtTargetProperty.boolValue);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("useSide"));
 		EditorGUILayout.EndToggleGroup();
 

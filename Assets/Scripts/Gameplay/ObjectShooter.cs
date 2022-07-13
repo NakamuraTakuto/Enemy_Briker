@@ -16,7 +16,7 @@ public class ObjectShooter : MonoBehaviour
 	// The rate of creation, as long as the key is pressed
 	public float creationRate = .5f;
 
-	// The speed at which the object are shot along the Y axis
+	// The speed PlayerAttack which the object are shot along the Y axis
 	public float shootSpeed = 5f;
 
 	public Vector2 shootDirection = new Vector2(1f, 1f);

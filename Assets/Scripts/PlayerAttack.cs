@@ -4,7 +4,7 @@ using UnityEngine;
 //攻撃（ボール）をコントロールする
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class at : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
     private bool isPlayer;
     [SerializeField] GameObject m_player = default;
@@ -19,20 +19,16 @@ public class at : MonoBehaviour
     [Header("ボールのオフセット"), SerializeField] Vector3 _ballOffset;
 
     //プレイヤーのスクリプト
-    private Keyget _playerCs;
-    PlayerHp _ph;
-    PlayerHp _lc;
-
+    private PlayerController  _playerCs;
+    /*[SerializeField]*/ PlayerHp _playerHp = default;
     // Start is called before the first frame update
     void Start()
     {
         m_rb2d = GetComponent<Rigidbody2D>();
-        _playerCs = GameObject.Find("Yuusya").GetComponent<Keyget>();
+        _playerCs = GameObject.Find("Yuusya").GetComponent<PlayerController >();
         isPlayer = true;
-
-        _ph = GameObject.Find("HpController").GetComponent<PlayerHp>();
-        _lc = GameObject.Find("HpController").GetComponent<PlayerHp>();
         _sr = GetComponent<SpriteRenderer>();
+        _playerHp = GameObject.Find("Yuusya").GetComponent<PlayerHp>();
     }
 
 
@@ -53,7 +49,7 @@ public class at : MonoBehaviour
             }
         }
 
-        if (_lc._playerHp == 1)
+        if (_playerHp._getPlayerHp == 1)
         {
             _sr.color = Color.red;
         }
@@ -65,26 +61,11 @@ public class at : MonoBehaviour
         //下に落ちたら消える
         if (this.transform.position.y < -10f)
         {
-            
+            _playerHp._getPlayerHp -= 1;
             Destroy(this.gameObject);
         }
 
 
     }
    
-
-    private void OnDestroy()
-    {
-      
-        _playerCs._noAt = true;
-       
-        isPlayer = true;
-
-
-        //弾を消すときにHPを減らす
-        Debug.Log(_ph);
-        _ph._playerHp -= 1;
-
-
-    }
 }

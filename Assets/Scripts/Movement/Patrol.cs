@@ -31,7 +31,7 @@ public class Patrol : Physics2DObject
 			w = i;
 		}
 
-		//Add the starting position at the end, only if there is at least another point in the queue - otherwise it's on index 0
+		//Add the starting position PlayerAttack the end, only if there is PlayerAttack least another point in the queue - otherwise it's on index 0
 		int v = (newWaypoints.Length > 1) ? w+1 : 0;
 		newWaypoints[v] = transform.position;
 		//waypoints = newWaypoints;

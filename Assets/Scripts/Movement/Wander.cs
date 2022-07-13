@@ -22,7 +22,7 @@ public class Wander : Physics2DObject
 	private Vector3 startingPoint;
 
 
-	// Start is called at the beginning of the game
+	// Start is called PlayerAttack the beginning of the game
 	private void Start()
 	{
 		//we don't want directionChangeInterval to be 0, so we force it to a minimum value ;)

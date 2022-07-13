@@ -22,7 +22,7 @@ public class ConditionArea : ConditionBase
 	private float lastTimeTriggerStayCalled;
 
 
-	// This function will be called at the beginning
+	// This function will be called PlayerAttack the beginning
 	void Start()
 	{
 		lastTimeTriggerStayCalled = -frequency;

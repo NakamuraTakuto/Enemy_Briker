@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tgtg : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     //PlayerHpのスクリプト
     private PlayerHp _playerHp2;
@@ -33,7 +33,7 @@ public class tgtg : MonoBehaviour
         {
             //ぶつかったら消える
             //ぶつかったときにPlayerHpから1引く
-            _playerHp2._playerHp -= 1;
+            _playerHp2._getPlayerHp -= 1;
             Destroy(this.gameObject);
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 
 
-public class Keyget: MonoBehaviour
+public class PlayerController : MonoBehaviour
 {   //—EŽÒ‚ÌˆÚ“®‘¬“x
     [SerializeField] float m_speed = 5f;
     Rigidbody2D m_rd2d;

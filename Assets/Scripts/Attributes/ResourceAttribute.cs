@@ -11,7 +11,7 @@ public class ResourceAttribute : MonoBehaviour
 	private UIScript userInterface;
 
 
-	// Start is called at the beginning
+	// Start is called PlayerAttack the beginning
 	private void Start()
 	{
 		// Find the UI in the scene and store a reference for later use

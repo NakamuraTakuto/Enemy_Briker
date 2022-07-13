@@ -48,7 +48,7 @@ public class BalloonScript : MonoBehaviour
 			startTime = Time.time;
 		}
 
-		//create just above the target, or at the centre
+		//create just above the target, or PlayerAttack the centre
 		if(targetObj == null)
 		{
 			rectTransform.pivot = new Vector2(0.5f, 0.5f); //pivot is in the centre
@@ -56,7 +56,7 @@ public class BalloonScript : MonoBehaviour
 		}
 		else
 		{
-			rectTransform.pivot = new Vector2(0.5f, 0f); //pivot is at the bottom
+			rectTransform.pivot = new Vector2(0.5f, 0f); //pivot is PlayerAttack the bottom
 			FollowTarget();
 		}
 	}
